@@ -1,45 +1,126 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  background: linear-gradient(135deg, #222, #333);
-  font-family: 'Arial', sans-serif;
-  color: white;
-  text-align: center;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background: linear-gradient(135deg, #222, #333);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
 }
 
 #game {
-  display: block;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.6);
+    display: block;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-#start {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 15px 30px;
-  font-size: 24px;
-  background: hotpink;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
+#start,
+#nameSubmitBtn,
+#restartBtn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 24px;
+    background: hotpink;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
 }
 
-#start:hover {
-  background: deeppink;
+#start:hover,
+#nameSubmitBtn:hover,
+#restartBtn:hover {
+    background: deeppink;
 }
 
 .info {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 18px;
-  color: white;
-  z-index: 5;
-  text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    color: white;
+    z-index: 5;
+    text-align: left;
+}
+
+#nameInput {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#nameInput label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#nameInput input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+#gameOverScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    text-align: center; /* 將內容置中 */
+}
+
+#gameOverScreen h2 {
+    margin-top: 0;
+}
+
+#gameOverScreen #leaderboard {
+    margin-top: 10px;
+    text-align: left;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    margin-bottom: 20px; /* 為按鈕留空間 */
+}
+
+#gameOverScreen #leaderboard ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#gameOverScreen #leaderboard li {
+    padding: 5px 0;
+    border-bottom: 1px solid #555;
+}
+
+#gameOverScreen #leaderboard li:last-child {
+    border-bottom: none;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background: #45a049;
 }
