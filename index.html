@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-  <meta charset="UTF-8">
-  <title>🍑愛愛貪吃蛇🍑</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>🍑愛愛貪吃蛇🍑</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <button id="start">開始遊戲</button>
-  <canvas id="game"></canvas>
+    <div id="nameInput">
+        <label for="playerName">玩家名稱:</label>
+        <input type="text" id="playerName" placeholder="請輸入你的名稱">
+        <button id="startBtn">開始遊戲</button>  </div>
 
-  <div class="info">
-    <div>分數: <span id="score">0</span></div>
-    <div>最高分: <span id="highScore">0</span></div>
-    <div style="font-size:14px;">使用 ↑ ↓ ← → 控制方向</div>
-  </div>
+    <canvas id="game"></canvas>
 
-  <script src="script.js"></script>
+    <div class="info">
+        <div>分數: <span id="score">0</span></div>
+        <div>最高分: <span id="highScore">0</span></div>
+        <div style="font-size:14px;">使用 ↑ ↓ ← → 控制方向</div>
+    </div>
+
+    <div id="gameOverScreen">
+        <h2>遊戲結束！</h2>
+        <p>你的分數: <span id="finalScore">0</span></p>
+        <div id="leaderboard">
+            </div>
+        <button id="restartBtn">再來一次</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
